@@ -1,4 +1,4 @@
-# # Problem - https://www.hackerrank.com/challenges/flatland-space-stations/
+# Problem - https://www.hackerrank.com/challenges/flatland-space-stations/
 
 # inputs:
 # n = 5
