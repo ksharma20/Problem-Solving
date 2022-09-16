@@ -1,4 +1,4 @@
-# Problem - https://www.codingame.com/ide/puzzle/shadows-of-the-knight-episode-1
+# Problem - https://www.codingame.com/training/medium/shadows-of-the-knight-episode-1
 # Skills Needed: Binary Search & Intervals
 
 w, h = [int(i) for i in input().split()] # w: width of the building. h: height of the building.
