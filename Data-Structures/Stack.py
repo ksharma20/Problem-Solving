@@ -1,7 +1,7 @@
 # Stack using linked list 
 from LinkedList import Node
 
-class Stack():
+class StackL():
 
     def __init__(self):
         self.initial = None
@@ -52,20 +52,48 @@ class Stack():
         print("End")
         return count
 
+# Stack using Arrays
+class StackA:
+
+    def __init__(self, size=10) -> None:
+        self.Max = size
+        self.top = 0
+        self.Arr = [None for _ in range(self.Max)]
+    
+    def push(self, val):
+        if self.top < self.Max:
+            self.Arr[self.top] = val
+            self.top += 1
+        else:
+            print("Overflown Stack")
+
+    def pop(self):
+        if self.top > 0:
+            self.top -= 1
+        else:
+            print("Stack Underflown")
+        return self.Arr[self.top+1]
+
+    def peek(self):
+        print(self.Arr[self.top])
+
+    def display(self):
+        for i in range(self.top):
+            print(self.Arr[i], end=' | ')
+        print("End")
+        return self.top
+
 
 if __name__=='__main__':
-    stack = Stack()
+    stack = StackA()
     stack.push(7)
     stack.push(5)
     stack.push(8)
     stack.push(10)
     stack.push(50)
 
-    print(stack.initial.data)
     stack.pop()
 
     stack.peek()
 
     print("Number of Elements(In Stack) = ",stack.display())
-
-    
