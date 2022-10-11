@@ -1,5 +1,6 @@
-# Stack using linked list 
+# Stack using linked list
 from LinkedList import Node
+
 
 class StackL():
 
@@ -27,7 +28,7 @@ class StackL():
             else:
                 self.initial = None
                 print("Stack is Empty Now")
-        else: 
+        else:
             print("Empty Stack")
         return head
 
@@ -37,14 +38,14 @@ class StackL():
             while head.next:
                 head = head.next
             print(head.data)
-        else: 
+        else:
             print("Empty Stack")
         return head
 
     def display(self):
         head = self.initial
         count = 0
-        print("Start |",end=" ")
+        print("Start |", end=" ")
         while head:
             print(head.data, end=" | ")
             head = head.next
@@ -53,13 +54,15 @@ class StackL():
         return count
 
 # Stack using Arrays
+
+
 class StackA:
 
     def __init__(self, size=10) -> None:
         self.Max = size
         self.top = 0
         self.Arr = [None for _ in range(self.Max)]
-    
+
     def push(self, val):
         if self.top < self.Max:
             self.Arr[self.top] = val
@@ -84,7 +87,7 @@ class StackA:
         return self.top
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     stack = StackA()
     stack.push(7)
     stack.push(5)
@@ -93,7 +96,12 @@ if __name__=='__main__':
     stack.push(50)
 
     stack.pop()
+    stack.pop()
+
+    stack.push(3)
 
     stack.peek()
 
-    print("Number of Elements(In Stack) = ",stack.display())
+    print("Number of Elements(In Stack) = ", stack.display())
+
+    print(stack.Arr)
